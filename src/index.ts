@@ -1,7 +1,20 @@
-const sayhi = (name: string, age: number, gender?: string): string => {
-  return `My name is ${name}. I'm ${age}. And I am ${gender}! lala`
+interface Human {
+  name: string,
+  age: number,
+  job: string
 }
 
-console.log(sayhi('YounJi', 28, 'Female'))
+const person = {
+  name: "Song",
+  age: 28,
+  job: "student"
+}
+
+
+const sayhi = (person: Human): string => {
+  return `My name is ${person.name}. I'm ${person.age}. And I am ${person.job}! lala`
+}
+
+console.log(sayhi(person))
 
 export {}
